@@ -8,31 +8,6 @@ from mtcnn.mtcnn import MTCNN #not installed
 import numpy as np
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Función para almacenar el registro facial
 
 def registro_facial():
@@ -193,7 +168,7 @@ def login():
   contra_entrada2 = Entry(pantalla2, textvariable = verificacion_contra)
   contra_entrada2.pack()
   Label(pantalla2, text = "").pack()
-  Button (pantalla2, text = "Inicio de sesion tradicional", width = 20, height = 1, command = verificacion_login). pack()
+  #Button (pantalla2, text = "Inicio de sesion tradicional", width = 20, height = 1, command = verificacion_login). pack()
   
   #Crear botón para login facial
   Label(pantalla2, text = "").pack()
