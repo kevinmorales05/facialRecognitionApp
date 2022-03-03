@@ -78,7 +78,6 @@ def login_facial():
             cv2.imwrite(usuario_login+"LOG.jpg",cara_reg)
             return pyplot.imshow(data[y1:y2, x1:x2])
         pyplot.show()
-
     #detectamos el rostro
     img = usuario_login+"LOG.jpg"
     pixeles = pyplot.imread(img)
@@ -100,9 +99,8 @@ def login_facial():
         if len(matches)  == 0:
             return 0
         return len (regiones_similares)/len(matches) #exportamos el porcentaje de similitud
-
+    
     #importamos las imágenes y llamamos la función de comparación
-
     im_archivos = os.listdir() #importamos la lista de archivos con la librería os
     if usuario_login+".jpg" in im_archivos: #commparamos los archivos con el q nos interesa
         rostro_reg = cv2.imread(usuario_login+".jpg",0) #importamos el rostro del registro
@@ -119,8 +117,6 @@ def login_facial():
     else:
         print("Usuario no encontrado")
         Label (pantalla2, text = "Usuario no encontrado", fg = "red", font = ("Calibri",11)).pack()
-
-
 
 #función para registrar el usuario
 
@@ -141,7 +137,7 @@ def registrar_usuario ():
   Label (pantalla1, text = "Registro Convencional Exitoso", fg = "green", font = ("Calibri",11)).pack()
 
 
-
+#INTERFAZ GRÁFICA
 # función q asigna el botón login
 def login():
   global pantalla2
